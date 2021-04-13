@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/strenth_level_text"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/strenth_level_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/password_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/password_input"
+        app:layout_constraintTop_toTopOf="@+id/password_input" />
+
+    <View
+        android:id="@+id/strength_level_indicator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/lightGray"
+        app:layout_constraintEnd_toEndOf="@+id/strenth_level_text"
+        app:layout_constraintStart_toStartOf="@+id/password_input"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+
+    <ImageView
+        android:id="@+id/lowerCase__img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/strength_level_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/strength_level_indicator"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/lowerCase__txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/lowercase_letters"
+        android:textColor="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerCase__img"
+        app:layout_constraintStart_toEndOf="@+id/lowerCase__img"
+        app:layout_constraintTop_toTopOf="@+id/lowerCase__img" />
+
+    <ImageView
+        android:id="@+id/upperCase__img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/lowerCase__img"
+        app:layout_constraintTop_toBottomOf="@+id/lowerCase__img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/darkGray" />
+
+    <TextView
+        android:id="@+id/upperCase__txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/uppercase_letters"
+        android:textColor="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="@+id/upperCase__img"
+        app:layout_constraintStart_toEndOf="@+id/upperCase__img"
+        app:layout_constraintTop_toTopOf="@+id/upperCase__img" />
+
+    <ImageView
+        android:id="@+id/digits_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/upperCase__img"
+        app:layout_constraintStart_toStartOf="@+id/upperCase__img"
+        app:layout_constraintTop_toBottomOf="@+id/upperCase__img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/darkGray"/>
+
+    <TextView
+        android:id="@+id/digits_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/digits"
+        android:textColor="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="@+id/digits_img"
+        app:layout_constraintStart_toEndOf="@+id/digits_img"
+        app:layout_constraintTop_toTopOf="@+id/digits_img" />
+
+    <ImageView
+        android:id="@+id/spe_cha_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/digits_img"
+        app:layout_constraintStart_toStartOf="@+id/digits_img"
+        app:layout_constraintTop_toBottomOf="@+id/digits_img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/darkGray"/>
+
+    <TextView
+        android:id="@+id/speCha_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/special_characters"
+        android:textColor="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="@+id/spe_cha_img"
+        app:layout_constraintStart_toEndOf="@+id/spe_cha_img"
+        app:layout_constraintTop_toTopOf="@+id/spe_cha_img" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:enabled="false"
+        android:backgroundTint="@color/lightGray"
+        android:text="@string/login"
+        android:textColor="@color/darkGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spe_cha_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

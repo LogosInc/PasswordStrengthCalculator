@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Password Strength Calculator</string>
+    <string name="password">Password</string>
+    <string name="lowercase_letters">LowerCase_letters</string>
+    <string name="uppercase_letters">Uppercase Letters</string>
+    <string name="digits">Digits</string>
+    <string name="special_characters">Special Characters</string>
+    <string name="login">LOGIN</string>
+</resources>
